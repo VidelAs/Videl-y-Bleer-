@@ -1,28 +1,26 @@
-﻿using System;
+using System;
 
-namespace kata2
+public class HelloWorld
 {
-    class Program
+    public static void Main(string[] args)
     {
-        public static int DigitalRoot(long n)
-        {
-            //Este procedimiento hace un recuento de la cantidad de digitos que tiene un numero
-            int cant = 0;
-            long n2;
-            n2 = n;
-            do
-            {
-                n2 = n2 / 10;
-                cant = cant + 1;
-            } while (n2 > 0);
-            return cant;
-        }
-        static void Main(string[] args)
-        {
-            long n;
-            Console.WriteLine("digite el numero");
-            n = long.Parse(Console.ReadLine());
-            Console.WriteLine("La cantidad de digitos del numero es :" + DigitalRoot(n));
-        }
+         //insert variables
+             int num1,num2,pago,win;
+             var aleatorio = new Random();
+             var value = aleatorio.Next(0, 100);
+            
+             Console.WriteLine("Enter your number");
+             num1 = int.Parse(Console.ReadLine());
+             Console.WriteLine("Enter your mount");
+             num2 = int.Parse(Console.ReadLine());
+             
+             if (num1 == value)
+             {
+              pago = (num2 * 80);
+              Console.WriteLine("You win:",pago);
+             }else{
+              Console.WriteLine("You lost");
+              Console.WriteLine("el numero ganar es:" + Convert.ToString(value));
+             }
     }
 }
