@@ -7,6 +7,7 @@ namespace kata2
         public static int DigitalRoot(long n)
         {
             //Este procedimiento hace un recuento de la cantidad de digitos que tiene un numero
+            //Holaa
             int cant = 0;
             long n2;
             n2 = n;
