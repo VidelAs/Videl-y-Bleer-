@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Calculadora
+{
+    class ejercicioCal
+    {
+         
+    
+        static void Main(string[] args)
+        {
+          int opcion=0;
+          int cont = 0;
+          int a;
+          Console.WriteLine("Calculadora Financiera") ;
+          Console.WriteLine("Ingrese una opcion:");
+          Console.WriteLine("1. Personal");
+          Console.WriteLine("2. Hipotecario");
+          Console.WriteLine("3. Prendario");
+          opcion = int.Parse(Console.ReadLine());
+          switch(opcion){
+                    case 1:
+                            double monto , mes;
+                            Console.WriteLine("Ingrese la cantidad que desa para su prestamo");
+                            monto = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Ingrese el plazo");
+                            mes= double.Parse(Console.ReadLine());
+                            double resultado;
+                            resultado = (monto*(0.11))+(monto/mes);
+                            Console.WriteLine("El monto a pagar es: "+ resultado);
+                            Console.WriteLine("Deseas hacer otra consulta?");
+                            Console.WriteLine("1 para si o 2 para no");
+                            a = int.Parse(Console.ReadLine());
+                            if (a==1){
+                                cont++;
+                            }
+                            break;
+                    case 2: 
+                            double monto1 , mes1;
+                            Console.WriteLine("Ingrese la cantidad que desa para su prestamo");
+                            monto1 = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Ingrese el plazo");
+                            mes1= double.Parse(Console.ReadLine());
+                            double resultado1;
+                            resultado1 = (monto1*(0.23))+(monto1/mes1);
+                            Console.WriteLine("El monto a pagar es: "+ resultado1);
+                            break;
+                    case 3: 
+                            double monto2 , mes2;
+                            Console.WriteLine("Ingrese la cantidad que desa para su prestamo");
+                            monto2 = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Ingrese el plazo");
+                            mes2= double.Parse(Console.ReadLine());
+                            double resultado2;
+                            resultado2 = (monto2*(0.18))+(monto2/mes2);
+                            Console.WriteLine("El monto a pagar es: "+ resultado2);
+                            break;
+                        }
+        }//main
+    }//Class final
+}//El final
