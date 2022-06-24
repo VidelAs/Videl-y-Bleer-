@@ -21,6 +21,7 @@ public class HelloWorld
              }else{
               Console.WriteLine("You lost");
               Console.WriteLine("el numero ganar es:" + Convert.ToString(value));
+              Console.WriteLine("VidelAs");
              }
     }
 }
