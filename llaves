@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Calculadora
+{
+    class ejercicioCal
+    {
+        static void Main(string[] args)
+        {
+          string [] nombre = { "videl", "bleer", "roger", "juan"};
+          int n=0;
+          while (n < 4)
+          {
+          var aleatorio = new Random();
+          var value = aleatorio.Next(0, 4);
+          Console.WriteLine(Convert.ToString(nombre[value]));
+          Console.Write(n);
+          n++;
+          }
+        }
+    }
+}
