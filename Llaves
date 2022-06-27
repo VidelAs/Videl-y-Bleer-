@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace shuffle_list
+{
+    public class Person
+    {
+        string name;
+        public Person(string name)
+        { Name = name; }
+        public string Name { get => name; set => name = value; }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            List<Person> list1 = new List<Person>();
+
+            list1.Add(new Person("Person 1"));
+            list1.Add(new Person("Person 2"));
+            list1.Add(new Person("Person 3"));
+            list1.Add(new Person("Person 4"));
+            list1.Add(new Person("Person 5"));
+
+            var rnd = new Random();
+            var randomized = list1.OrderBy(item => rnd.Next());
+
+            foreach (var value in randomized)
+            {
+                Console.WriteLine(value.Name);
+            }
+        }
+    }
+}
