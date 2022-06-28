@@ -1,2 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-    }
+namespace Calculadora
+{
+    class ejercicioCal
+    {
+        static void Main(string[] args)
+        {
+           //char opcion;
+           string continuar="";
+            int opcion1=0;
+           do {
+              Console.WriteLine("Bienvenidos a mi casa:");
+              Console.WriteLine("1. Eres el padre");
+              Console.WriteLine("2. Eres el hijo");
+              Console.WriteLine("3. No sabes quien eres");
+              opcion1 = int.Parse(Console.ReadLine());
+              
+            switch(opcion1){
+                case 1: 
+                  int respuesta1;
+                  Console.WriteLine("Entras a la casa y encuentras a tu hijo golpeando una ventana");
+                  Console.WriteLine("Que haces?");
+                  Console.WriteLine("1:lo golpeas");
+                  Console.WriteLine("2:lo agarras para que no se lastime");
+                  respuesta1= int.Parse(Console.ReadLine());
+                  if (respuesta1==1){
+                    Console.WriteLine("Se fue a llorar a la habitacion");  
+                  }
+                  if (respuesta1==2){
+                      Console.WriteLine("Se te suelta, golpea la ventana la cual se quiebra y comienza a sangrar");
+                  }
+                  if (respuesta1 ^= 1 && respuesta1 ^= 2){
+                       Console.WriteLine("no hagas trampas");
+                  }
+                  Console.Clear();
+                  break;
+                case 2: 
+                    double monto1 , mes1;
+                    Console.WriteLine("Ingrese la cantidad que desa para su prestamo");
+                    monto1 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Ingrese el plazo");
+                    mes1= double.Parse(Console.ReadLine());
+                    double resultado1;
+                    resultado1 = (monto1*(0.23))+(monto1/mes1);
+                    Console.WriteLine("El monto a pagar es: "+ resultado1);
+                    Console.WriteLine("Desea continuar? y /n");
+                    continuar=Console.ReadLine();
+                    Console.Clear();
+                    break;
+                case 3: 
+                    double monto2 , mes2;
+                    Console.WriteLine("Ingrese la cantidad que desa para su prestamo");
+                    monto2 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Ingrese el plazo");
+                    mes2= double.Parse(Console.ReadLine());
+                    double resultado2;
+                    resultado2 = (monto2*(0.18))+(monto2/mes2);
+                    Console.WriteLine("El monto a pagar es: "+ resultado2);
+                    Console.WriteLine("Desea continuar? y /n");
+                    continuar=Console.ReadLine();
+                    Console.Clear();
+                    break;
+            }//switch
+           }//Fin del do
+           while(continuar != "n");
+        }//Fin del main
+        //Console.ReadLine();//Necesario
+    }//Fin de la class
+}//Fin de namespace
